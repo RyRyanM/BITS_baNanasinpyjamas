@@ -3,8 +3,8 @@ from background import Background
 
 class Pipes:
     def __init__(self):
-        self.pipe = pygame.image.load("minigame-1/assets/sprites/pipe.png").convert_alpha()
-        self.pipe = pygame.transform.scale(self.pipe, (100, 500))
+        self.pipe = pygame.image.load("assets/sprites/knife.png").convert_alpha()
+        self.pipe = pygame.transform.scale(self.pipe, (50, 350))
         self.pipe_list = [] #throw in a lot of rectangles
         self.SPAWNPIPE = pygame.USEREVENT
         pygame.time.set_timer(self.SPAWNPIPE, 1000)
@@ -14,7 +14,7 @@ class Pipes:
     def create_pipe(self):
         random_pipe_position = random.choice(self.pipe_height)
         bottom_pipe = self.pipe.get_rect(midtop = (1024, random_pipe_position))
-        top_pipe = self.pipe.get_rect(midbottom = (1024, random_pipe_position - 200))
+        top_pipe = self.pipe.get_rect(midbottom = (1024, random_pipe_position - 250))
         return bottom_pipe, top_pipe
 
     def move_pipes(self, pipes):

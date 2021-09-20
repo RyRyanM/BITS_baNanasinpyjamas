@@ -3,10 +3,10 @@ import pygame
 class Slime:
     def __init__(self):
         pygame.init()
-        self.slime_flat = pygame.image.load("minigame-1/assets/sprites/slime_flat.PNG").convert_alpha()
-        self.slime_flat = pygame.transform.scale(self.slime_flat, (70, 40))
-        self.slime_high = pygame.image.load("minigame-1/assets/sprites/slime_high.PNG").convert_alpha()
-        self.slime_high = pygame.transform.scale(self.slime_high, (70, 40))
+        self.slime_flat = pygame.image.load("assets/sprites/slime_flat.PNG").convert_alpha()
+        self.slime_flat = pygame.transform.scale(self.slime_flat, (90, 50))
+        self.slime_high = pygame.image.load("assets/sprites/slime_high.PNG").convert_alpha()
+        self.slime_high = pygame.transform.scale(self.slime_high, (90, 50))
         self.slime_frames = [self.slime_flat, self.slime_high] #create animation 
         self.frame_index = 0
         self.slime_current = self.slime_frames[self.frame_index]
