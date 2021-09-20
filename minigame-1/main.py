@@ -4,6 +4,7 @@ from game import Game
 def main():
     pygame.mixer.pre_init() #so the sounds don't delay 
     pygame.init() 
+    pygame.display.set_caption('Joyaki')
     game = Game()
     game.game_loop()
 
